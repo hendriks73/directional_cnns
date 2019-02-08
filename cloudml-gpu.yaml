@@ -1,0 +1,10 @@
+trainingInput:
+  pythonVersion: "3.5"
+#  scaleTier: STANDARD_1
+  scaleTier: CUSTOM # was CUSTOM
+  # standard_gpu provides 1 GPU. Change to complex_model_m_gpu for 4 GPUs
+  masterType: standard_gpu
+#  masterType: complex_model_m_gpu
+#  workerType: standard_gpu
+#  workerCount: 10
+  #  runtimeVersion: "1.2"
