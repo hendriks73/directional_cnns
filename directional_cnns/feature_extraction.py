@@ -87,7 +87,7 @@ def main():
     else:
         ground_truth = None
 
-    convert_audio_folder_to_joblib(base_folder, ground_truth, join(base_folder, 'mel_features.joblib'), tempo_extractor)
+    convert_audio_folder_to_joblib(base_folder, ground_truth, join(base_folder, 'tempo_features.joblib'), tempo_extractor)
     convert_audio_folder_to_joblib(base_folder, ground_truth, join(base_folder, 'key_features.joblib'), key_extractor)
 
 
