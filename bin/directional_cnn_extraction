@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+# encoding: utf-8
+"""
+Feature extraction.
+"""
+
+import directional_cnns.feature_extraction
+
+if __name__ == '__main__':
+    directional_cnns.feature_extraction.main()

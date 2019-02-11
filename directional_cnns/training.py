@@ -337,7 +337,12 @@ def train(run=0, epochs=5000, patience=50, batch_size=32, lr=0.001, model=None, 
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        formatter_class=argparse.RawDescriptionHelpFormatter)
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description='''Main entry point for training and evaluating different models.   
+Both feature .joblib files and TSV ground truth files have to be provided.
+
+License: CC BY 3.0''')
+
     # Input Arguments
     parser.add_argument(
         '--train-file',

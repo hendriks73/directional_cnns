@@ -20,10 +20,12 @@ Download links:
 6. GiantSteps MTG Key and Tempo: https:/github.com/GiantSteps/giantsteps-mtg-key-dataset
 7. LMD Key and Tempo: https:/bit.ly/2Bl8D1J
 
+Should you use any of the datasets in your academic work, please cite the corresponding publications.  
+
 ## Annotations
 
 All necessary annotations are in the [annotations](./annotations) folder. For easy parsing they are formatted
-in a simple tab separated values (`.tsv`) format, with columns `id\tbpm\tkey\tgenre`. The class
+in a simple tab separated values (`.tsv`) format, with columns `id \t bpm \t key \t genre`. The class
 [GroundTruth](./directional_cnns/groundtruth.py) is capable of reading and interpreting these files.  
 
 ## Installation
@@ -41,6 +43,13 @@ Depending on how you define sample identifiers, you may need to make some manual
 The created `.joblib` files are simple dictionaries, containing strings as keys and a spectrograms as values.
 Note that the extracted spectrograms for the key and the tempo task differ (CQT vs Mel).
 
+After installation, you may run the extraction using the following command line script:
+
+    directional_cnn_extraction -a AUDIO_FILES_FOLDER [-g GROUND_TRUTH.tsv]
+    
+The ground truth file is optional. If given, only files that also occur in the ground truth are added
+to the created feature `.joblib` files.
+
 ## Running
 
 You can run the code either locally or on [Google ML Engine](https:/gcpsignup.page.link/9kLi).
@@ -57,6 +66,11 @@ with the following parameters (example for *key*):
     --train-file=annotations/key_train.tsv --valid-file=annotations/key_valid.tsv
     --test-files=annotations/giantsteps-key.tsv,annotations/gtzan_key.tsv,annotations/lmd_key_test.tsv
     --feature-files=features/giantsteps_key.joblib,features/mtg_tempo_key.joblib,features/gtzan_key.joblib,features/lmd_key.joblib
+
+After installation, you may run the training code using the following command line script:
+
+    directional_cnn_training [arguments]
+
 
 ### Remote
 

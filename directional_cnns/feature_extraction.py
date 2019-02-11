@@ -2,7 +2,7 @@
 Feature extraction code.
 Creates joblib feature files out of audio files.
 """
-
+import argparse
 from os import walk
 from os.path import join
 
@@ -73,7 +73,34 @@ def convert_audio_folder_to_joblib(base_folder, ground_truth, output_file, extra
     return dataset
 
 
+def parse_arguments():
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        description='''This script allows extracting features from mp3 or wav files by recursively
+walking a directory tree, starting with a provided base audio folder.
+The features are stored in simple dictionaries ('filename_w/o_extension': spectrogram),
+which in turn are stored in .joblib files.   
+
+License: CC BY 3.0''')
+
+    parser.add_argument(
+        '-a',
+        '--audio-folder',
+        help='Folder containing mp3 or wav audio files. Will be read recursively, file names are used as keys.',
+        required=True
+    )
+    parser.add_argument(
+        '-g',
+        '--ground-truth',
+        help='TSV file with ground truth. If set, only files also occurring in the truth will be read.',
+        required=False
+    )
+    args = parser.parse_args()
+    return args
+
+
 def main():
+    arguments = parse_arguments()
 
     def tempo_extractor(file):
         return extract_tempo_features(file, window_length=1024)
@@ -81,14 +108,14 @@ def main():
     def key_extractor(file):
         return extract_key_features(file, window_length=8192)
 
-    base_folder = sys.argv[1]
-    if len(sys.argv) > 2:
-        ground_truth = TempoGroundTruth(sys.argv[2])
+    audio_folder = arguments.audio_folder
+    if arguments.ground_truth is not None:
+        ground_truth = TempoGroundTruth(arguments.audio_folder)
     else:
         ground_truth = None
 
-    convert_audio_folder_to_joblib(base_folder, ground_truth, join(base_folder, 'tempo_features.joblib'), tempo_extractor)
-    convert_audio_folder_to_joblib(base_folder, ground_truth, join(base_folder, 'key_features.joblib'), key_extractor)
+    convert_audio_folder_to_joblib(audio_folder, ground_truth, join(audio_folder, 'tempo_features.joblib'), tempo_extractor)
+    convert_audio_folder_to_joblib(audio_folder, ground_truth, join(audio_folder, 'key_features.joblib'), key_extractor)
 
 
 if __name__ == '__main__':

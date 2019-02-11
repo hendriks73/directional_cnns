@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+# encoding: utf-8
+"""
+Training.
+"""
+
+import directional_cnns.training
+
+if __name__ == '__main__':
+    directional_cnns.training.main()
