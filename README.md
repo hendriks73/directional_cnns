@@ -12,13 +12,13 @@ contain all audio samples or extracted features. But you can download those and 
 
 Download links: 
 
-1. GTzan: http:/marsyas.info/download/data_sets/
-2. Ballroom: http:/mtg.upf.edu/ismir2004/contest/tempoContest/node5.html
-3. Extended Ballroom: http:/anasynth.ircam.fr/home/media/ExtendedBallroom
-4. GiantSteps Key: https:/github.com/GiantSteps/giantsteps-key-dataset
-5. GiantSteps Tempo: https:/github.com/GiantSteps/giantsteps-tempo-dataset
-6. GiantSteps MTG Key and Tempo: https:/github.com/GiantSteps/giantsteps-mtg-key-dataset
-7. LMD Key and Tempo: https:/bit.ly/2Bl8D1J
+- [GTzan](http:/marsyas.info/download/data_sets/) 
+- [Ballroom](http:/mtg.upf.edu/ismir2004/contest/tempoContest/node5.html) 
+- [Extended Ballroom](http:/anasynth.ircam.fr/home/media/ExtendedBallroom) 
+- [GiantSteps Key](https:/github.com/GiantSteps/giantsteps-key-dataset) 
+- [GiantSteps Tempo](https:/github.com/GiantSteps/giantsteps-tempo-dataset) 
+- [GiantSteps MTG Key and Tempo](https:/github.com/GiantSteps/giantsteps-mtg-key-dataset)
+- [LMD Key and Tempo](https:/bit.ly/2Bl8D1J)
 
 Should you use any of the datasets in your academic work, please cite the corresponding publications.  
 
