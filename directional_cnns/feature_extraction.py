@@ -8,7 +8,6 @@ from os.path import join
 
 import librosa
 import numpy as np
-import sys
 from sklearn.externals import joblib
 
 from directional_cnns.groundtruth import TempoGroundTruth
@@ -40,8 +39,8 @@ def extract_key_features(file, window_length=8192):
 
 def extract_features_from_folder(base_folder, ground_truth, extractor):
     """
-    Reads a folder and its subfolders, parses all LOFI.mp3/.wav files and stores
-    the result in a dictionary using the filenames (minus the extension) as keys.
+    Reads a folder and its sub-folders, parses all LOFI.mp3/.wav files and stores
+    the result in a dictionary using the file names (minus the extension) as keys.
 
     :param base_folder: folder with ``.mp3/.wav`` files
     :return: dictionary with file names as keys
@@ -60,10 +59,12 @@ def extract_features_from_folder(base_folder, ground_truth, extractor):
 
 def convert_audio_folder_to_joblib(base_folder, ground_truth, output_file, extractor):
     """
-    Extract features from all audio files in the given folder and its subfolders,
+    Extract features from all audio files in the given folder and its sub-folders,
     and store them under keys equivalent to the file names (minus extension),
     store the resulting dict in ``output_file`` and return the dict.
 
+    :param extractor: function that extracts features from a given file
+    :param ground_truth: ground truth
     :param base_folder: base folder for json files
     :param output_file: joblib file
     :return: dict of keys and features
