@@ -1,6 +1,5 @@
 from tensorflow.python.keras import Input, Model
-from tensorflow.python.keras.layers import Conv2D, Dropout, AveragePooling2D, GlobalAveragePooling2D, Activation, \
-    Flatten, Dense
+from tensorflow.python.keras.layers import Conv2D, Dropout, AveragePooling2D, GlobalAveragePooling2D, Activation
 
 
 def create_shallow_key_model(input_shape=(168, 60, 1), output_dim=24, filters=4,
