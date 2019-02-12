@@ -2,7 +2,7 @@
 
 # Directional CNNs
 
-This repository accompanies the paper "Musical Tempo and Key Estimation with Directional Convolutional Neural Networks"
+This repository accompanies the paper *Musical Tempo and Key Estimation with Directional Convolutional Neural Networks*
 in order to improve reproducibility of the reported results.
 
 ## Audio Files
@@ -24,8 +24,8 @@ Should you use any of the datasets in your academic work, please cite the corres
 
 ## Annotations
 
-All necessary annotations are in the [annotations](./annotations) folder. For easy parsing they are formatted
-in a simple tab separated values (`.tsv`) format, with columns `id \t bpm \t key \t genre`. The class
+All necessary ground truth annotations are in the [annotations](./annotations) folder. For easy parsing they are
+formatted in a simple tab separated values (`.tsv`) format, with columns `id \t bpm \t key \t genre \n`. The class
 [GroundTruth](./directional_cnns/groundtruth.py) is capable of reading and interpreting these files.  
 
 ## Installation
@@ -38,7 +38,8 @@ In a clean Python 3.5/3.6 environment:
 
 ## Feature Extraction
 
-To extract features, please use the code in [feature_extraction.py](./directional_cnns/feature_extraction.py).
+To extract features, you can use the code in [feature_extraction.py](./directional_cnns/feature_extraction.py)
+or the command line script mentioned below.
 Depending on how you define sample identifiers, you may need to make some manual adjustments.
 The created `.joblib` files are simple dictionaries, containing strings as keys and a spectrograms as values.
 Note that the extracted spectrograms for the key and the tempo task differ (CQT vs Mel).
@@ -58,8 +59,8 @@ You can run the code either locally or on [Google ML Engine](https:/gcpsignup.pa
 
 Running this locally only makes sense on a GPU and even then it will take very long.  
 
-To run the training/reporting locally, you need to execute the script [training.py](./directional_cnns/training.py)
-with the following parameters (example for *key*):
+To run the training/reporting locally, you can execute the script [training.py](./directional_cnns/training.py)
+or the command line script mentioned below with the following arguments (example for *key*):
 
     --job-dir=./
     --model-dir=./
@@ -75,7 +76,7 @@ After installation, you may run the training code using the following command li
 ### Remote
 
 To run the training/reporting remotely on [Google ML Engine](https:/gcpsignup.page.link/9kLi), you first need to
-sign up, upload all necessary feature and annotations files to Google storage and then adapt the provided
+sign up, upload all necessary feature- and annotation-files to Google storage and then adapt the provided
 scripts [trainandpredict_key_ml_engine.sh](./trainandpredict_key_ml_engine.sh) and
 [trainandpredict_tempo_ml_engine.sh](./trainandpredict_tempo_ml_engine.sh) accordingly.
 
