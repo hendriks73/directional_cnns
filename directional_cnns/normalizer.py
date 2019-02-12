@@ -12,8 +12,8 @@ def std_normalizer(data):
     data = data.astype(np.float64)
     mean = np.mean(data)
     std = np.std(data)
+    data = data.copy() - mean
     if std != 0.:
-        data = data.copy()
-        data = (data-mean) / std
+        data = data / std
     return data.astype(np.float16)
 

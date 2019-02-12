@@ -330,10 +330,13 @@ class KeyGroundTruth(GroundTruth):
     def get_index(self, label):
         if label is None:
             return None
-        klass = librosa.note_to_midi(label.replace('m', '')) - 12
-        if label.endswith('m'):
-            klass += 12
-        return klass
+        try:
+            klass = librosa.note_to_midi(label.replace('m', '')) - 12
+            if label.endswith('m'):
+                klass += 12
+            return klass
+        except librosa.ParameterError:
+            return None
 
     def get_index_for_key(self, key, semitone_shift=0):
         if semitone_shift is None:

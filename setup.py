@@ -15,6 +15,7 @@ setup(name='directional_cnns',
       scripts=scripts,
       install_requires=[
           'h5py',
+          'pytest',
           'scikit-learn',
           'librosa',
           'tensorflow-gpu==1.10.1;platform_system!="Darwin"',

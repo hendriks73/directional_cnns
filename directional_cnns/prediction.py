@@ -6,7 +6,7 @@ import numpy as np
 
 def predict(model, input_shape, windowed, ground_truth, features, normalizer):
     """
-    Predict values using the given model, spectrogram input shape, groundtruth,
+    Predict values using the given model, spectrogram input shape, ground truth,
     features dict and normalizer function.
 
     :param model: model
