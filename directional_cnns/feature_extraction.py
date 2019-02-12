@@ -111,7 +111,7 @@ def main():
 
     audio_folder = arguments.audio_folder
     if arguments.ground_truth is not None:
-        ground_truth = TempoGroundTruth(arguments.audio_folder)
+        ground_truth = TempoGroundTruth(arguments.ground_truth)
     else:
         ground_truth = None
 
