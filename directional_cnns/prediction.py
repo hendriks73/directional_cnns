@@ -22,9 +22,11 @@ def predict(model, input_shape, windowed, ground_truth, features, normalizer):
         # make sure we don't modify the original!
         spectrogram = np.copy(features[key])
 
+        effective_shape = input_shape
         # cropping for key
         if input_shape[0] != spectrogram.shape[1] and input_shape[0] == 168:
             spectrogram = spectrogram[8:-16]
+            effective_shape = (spectrogram.shape[0], input_shape[1], input_shape[2])
 
         if windowed:
             length = spectrogram.shape[1]
@@ -34,7 +36,7 @@ def predict(model, input_shape, windowed, ground_truth, features, normalizer):
                 sample = spectrogram[:, input_shape[1] * i:input_shape[1] * (i+1),:]
                 if normalizer is not None:
                     sample = normalizer(sample)
-                samples.append(np.reshape(sample, (1, *input_shape)))
+                samples.append(np.reshape(sample, (1, *effective_shape)))
             X = np.vstack(samples)
         else:
             # this assumes that we can predict spectrograms of arbitrary lengths (dim=1)
