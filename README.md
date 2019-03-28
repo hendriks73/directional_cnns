@@ -1,4 +1,4 @@
-[![CC BY 3.0](https://img.shields.io/badge/License-CC%20BY%203.0-blue.svg)](https:/creativecommons.org/licenses/by/3.0/)
+[![CC BY 3.0](https://img.shields.io/badge/License-CC%20BY%203.0-blue.svg)](https://creativecommons.org/licenses/by/3.0/)
 
 # Directional CNNs
 
@@ -12,13 +12,13 @@ contain all audio samples or extracted features. But you can download those and 
 
 Download links: 
 
-- [GTzan](http:/marsyas.info/download/data_sets/) 
-- [Ballroom](http:/mtg.upf.edu/ismir2004/contest/tempoContest/node5.html) 
-- [Extended Ballroom](http:/anasynth.ircam.fr/home/media/ExtendedBallroom) 
-- [GiantSteps Key](https:/github.com/GiantSteps/giantsteps-key-dataset) 
-- [GiantSteps Tempo](https:/github.com/GiantSteps/giantsteps-tempo-dataset) 
-- [GiantSteps MTG Key and Tempo](https:/github.com/GiantSteps/giantsteps-mtg-key-dataset)
-- [LMD Key and Tempo](https:/bit.ly/2Bl8D1J)
+- [GTzan](http://marsyas.info/download/data_sets/) 
+- [Ballroom](http://mtg.upf.edu/ismir2004/contest/tempoContest/node5.html) 
+- [Extended Ballroom](http://anasynth.ircam.fr/home/media/ExtendedBallroom) 
+- [GiantSteps Key](https://github.com/GiantSteps/giantsteps-key-dataset) 
+- [GiantSteps Tempo](https://github.com/GiantSteps/giantsteps-tempo-dataset) 
+- [GiantSteps MTG Key and Tempo](https://github.com/GiantSteps/giantsteps-mtg-key-dataset)
+- [LMD Key and Tempo](https://bit.ly/2Bl8D1J)
 
 Should you use any of the datasets in your academic work, please cite the corresponding publications.  
 
@@ -53,7 +53,7 @@ to the created feature `.joblib` files.
 
 ## Running
 
-You can run the code either locally or on [Google ML Engine](https:/gcpsignup.page.link/9kLi).
+You can run the code either locally or on [Google ML Engine](https://gcpsignup.page.link/9kLi).
 
 ### Local
 
@@ -75,15 +75,15 @@ After installation, you may run the training code using the following command li
 
 ### Remote
 
-To run the training/reporting remotely on [Google ML Engine](https:/gcpsignup.page.link/9kLi), you first need to
+To run the training/reporting remotely on [Google ML Engine](https://gcpsignup.page.link/9kLi), you first need to
 sign up, upload all necessary feature- and annotation-files to Google storage and then adapt the provided
 scripts [trainandpredict_key_ml_engine.sh](./trainandpredict_key_ml_engine.sh) and
 [trainandpredict_tempo_ml_engine.sh](./trainandpredict_tempo_ml_engine.sh) accordingly.
 
 ## License
 
-This repository is licensed under [CC BY 3.0](https:/creativecommons.org/licenses/by/3.0/).
+This repository is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 For attribution, please cite:
 
-> XZ, Musical Tempo and Key Estimation with Directional Convolutional Neural Networks,
-> In Proceedings of ... 
+> Hendrik Schreiber and Meinard Müller, [Musical Tempo and Key Estimation using Convolutional Neural Networks with Directional Filters](https://arxiv.org/abs/1903.10839),
+> In Proceedings of the Sound and Music Computing Conference (SMC), Málaga, Spain, May 2019. 
