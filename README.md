@@ -1,4 +1,4 @@
-[![CC BY 3.0](https:/img.shields.io/badge/License-CC%20BY%203.0-blue.svg)](https:/creativecommons.org/licenses/by/3.0/)
+[![CC BY 3.0](https://img.shields.io/badge/License-CC%20BY%203.0-blue.svg)](https:/creativecommons.org/licenses/by/3.0/)
 
 # Directional CNNs
 
