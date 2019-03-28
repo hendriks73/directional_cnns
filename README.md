@@ -2,8 +2,8 @@
 
 # Directional CNNs
 
-This repository accompanies the paper *Musical Tempo and Key Estimation with Directional Convolutional Neural Networks*
-in order to improve reproducibility of the reported results.
+This repository accompanies the paper [Musical Tempo and Key Estimation using Convolutional Neural Networks with
+Directional Filters](https://arxiv.org/abs/1903.10839) in order to improve reproducibility of the reported results.
 
 ## Audio Files
 
@@ -85,5 +85,6 @@ scripts [trainandpredict_key_ml_engine.sh](./trainandpredict_key_ml_engine.sh) a
 This repository is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/).
 For attribution, please cite:
 
-> Hendrik Schreiber and Meinard Müller, [Musical Tempo and Key Estimation using Convolutional Neural Networks with Directional Filters](https://arxiv.org/abs/1903.10839),
+> Hendrik Schreiber and Meinard Müller, [Musical Tempo and Key Estimation using Convolutional Neural Networks with
+Directional Filters](https://arxiv.org/abs/1903.10839),
 > In Proceedings of the Sound and Music Computing Conference (SMC), Málaga, Spain, May 2019. 
