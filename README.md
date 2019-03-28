@@ -32,7 +32,7 @@ formatted in a simple tab separated values (`.tsv`) format, with columns `id \t 
 
 In a clean Python 3.5/3.6 environment:
 
-    git clone https:/github.com/XXX/directional_cnns.git
+    git clone https:/github.com/hendriks73/directional_cnns.git
     cd directional_cnns
     python setup.py install
 
