@@ -9,7 +9,7 @@ If you just want to estimate *tempo* values, using models from the paper, please
 the [tempo-cnn](https://github.com/hendriks73/tempo-cnn) repo. It hosts pre-trained models.
 
 If you just want to estimate *key* values, using models from the paper, please take a look at
-the [tempo-cnn](https://github.com/hendriks73/tempo-key) repo. It hosts pre-trained models. 
+the [tempo-key](https://github.com/hendriks73/tempo-key) repo. It hosts pre-trained models. 
  
 
 ## Audio Files
