@@ -5,12 +5,10 @@
 This repository accompanies the paper [Musical Tempo and Key Estimation using Convolutional Neural Networks with
 Directional Filters](http://smc2019.uma.es/articles/P1/P1_07_SMC2019_paper.pdf) in order to improve reproducibility of the reported results.
 
-If you just want to estimate *tempo* values, using models from the paper, please take a look at
-the [tempo-cnn](https://github.com/hendriks73/tempo-cnn) repo. It hosts pre-trained models.
+If you just want to estimate *tempo* or *key* values using models from the paper, please take a look at
+the [tempo-cnn](https://github.com/hendriks73/tempo-cnn) and [key-cnn](https://github.com/hendriks73/key-cnn) repos.
+They hosts pre-trained models.
 
-If you just want to estimate *key* values, using models from the paper, please take a look at
-the [tempo-key](https://github.com/hendriks73/tempo-key) repo. It hosts pre-trained models. 
- 
 
 ## Audio Files
 
