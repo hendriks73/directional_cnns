@@ -19,7 +19,7 @@ setup(name='directional_cnns',
           'scikit-learn',
           'librosa',
           'tensorflow-gpu==1.10.1;platform_system!="Darwin"',
-          'tensorflow==1.10.1;platform_system=="Darwin"',
+          'tensorflow==1.15.0;platform_system=="Darwin"',
       ],
       include_package_data=True,
       zip_safe=False)
